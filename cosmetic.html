@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Cosmetic Bag Red </title>
+  <style>
+    
+  </style>
+
+</head>
+<body>
+    <div class="return">
+    <a href="index.html">
+            <h2>👈 return </h2>
+    </a>
+    </div>
+    <form id="myForm">
+  <input type="text" name="product" placeholder="Your Order" required>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="text" name="instagram" placeholder="Your Instagram" required>
+  <input type="text" name="color" placeholder="Which Color?" required>
+  <textarea name="message" placeholder="Your comment"></textarea>
+  <button type="submit">Send!</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let data = {
+  product: document.querySelector("[name=product]").value,
+  name: document.querySelector("[name=name]").value,
+  instagram: document.querySelector("[name=instagram]").value,
+  color: document.querySelector("[name=color]").value,
+  comment: document.querySelector("[name=message]").value  // було message, тепер comment
+};
+
+  fetch("https://api.sheetbest.com/sheets/e1fcedca-f18a-4867-84ed-8164e5fd1c85", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => alert("Your order is already sent!"))
+  .catch(err => alert("Error, pls fill all: " + err));
+});
+</script>
+</body>
+</html>
