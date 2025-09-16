@@ -3,7 +3,58 @@
 <head>
 <title> Cosmetic Bag Red </title>
   <style>
-    
+    .folder{
+      text-align: center;
+      margin-top: 105px;
+      margin-left: 35%;
+      padding: 10px;
+      background-image: url("foto3.jpg");
+      background-size: cover;
+      background-position: 0.1px;
+      border-color: #253E4C;
+      height: 400px;
+      width: 430px;
+      border: 5px solid #253E4C;
+
+
+    }
+    input[type="text"]{
+      font-size: 23px;
+      margin: 16px;
+      background-color:rgb(248, 252, 201);
+      border: 3px black;
+      color: #253E4C;
+      text-align: left;
+      border-radius: 5px;
+    }
+    textarea[name="message"]{
+      font-size: 23px;
+      margin: 10px;
+      background-color:rgb(248, 252, 201);
+      border: 3px black;
+      color: #253E4C;
+       text-align: left;
+       border-radius: 5px;
+       
+
+    }
+    button[type="submit"]{
+      font-size: 33px;
+      background-color:rgb(248, 252, 201);
+      border: 3px black;
+       color: #253E4C;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    .return{
+         
+         width: 120px;
+         height: 50px;
+         text-align: center;
+         background-color: antiquewhite;
+         
+    }
   </style>
 
 </head>
@@ -13,14 +64,21 @@
             <h2>👈 return </h2>
     </a>
     </div>
+    <div class="folder">
     <form id="myForm">
-  <input type="text" name="product" placeholder="Your Order" required>
+  <input type="text" name="product" placeholder="Your Order" required >
+  <br>
   <input type="text" name="name" placeholder="Your Name" required>
+  <br>
   <input type="text" name="instagram" placeholder="Your Instagram" required>
+  <br>
   <input type="text" name="color" placeholder="Which Color?" required>
+  <br>
   <textarea name="message" placeholder="Your comment"></textarea>
+  <br>
   <button type="submit">Send!</button>
-</form>
+  </form>
+    </div>
 
 <script>
 document.getElementById("myForm").addEventListener("submit", function(e){
@@ -44,6 +102,7 @@ document.getElementById("myForm").addEventListener("submit", function(e){
   .then(res => alert("Your order is already sent!"))
   .catch(err => alert("Error, pls fill all: " + err));
 });
+
 </script>
 </body>
 </html>
