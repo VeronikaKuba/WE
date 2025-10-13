@@ -3,19 +3,23 @@
 <head>
 <title> Cosmetic Bag Red </title>
   <style>
+    .buy{
+      background-image: url("buy.jpg");
+      background-size: cover;
+    }
     .folder{
       text-align: center;
       margin-top: 105px;
       margin-left: 33%;
-      padding: 10px;
+      padding: 20px;
       background-image: url("foto3.jpg");
       background-size: cover;
       background-position: 0.1px;
-      border-color: #253E4C;
-      height: 400px;
+      border-color: #83aec7;
+      height: 425px;
       width: 430px;
-      border: 4px solid #253E4C;
-      margin-bottom: 100px;
+      border: 2px solid #6dabcf;
+      margin-bottom: 125px;
 
 
     }
@@ -27,6 +31,28 @@
       color: #253E4C;
       text-align: left;
       border-radius: 5px;
+    }
+    label[for="product"]{
+      font-size: 24px;
+      margin: 10px;
+      background-color:white;
+      border: 3px black;
+      color: #60879cf8;
+      text-align: left;
+      border-radius: 5px;
+      padding: 5px;
+
+    }
+    select[id="product"]{
+      font-size: 21px;
+      margin: 10px;
+      background-color:rgba(76, 102, 114, 0.863);
+      border: 3px black;
+      color: hsla(230, 37%, 97%, 0.769);
+      text-align: left;
+      border-radius: 5px;
+      padding: 5px;
+
     }
     textarea[name="message"]{
       font-size: 23px;
@@ -59,7 +85,7 @@
   </style>
 
 </head>
-<body>
+<body class="buy">
     <div class="return">
     <a href="index.html">
             <h2>👈 return </h2>
@@ -67,7 +93,15 @@
     </div>
     <div class="folder">
     <form id="myForm">
-  <input type="text" name="product" placeholder="Your Order" required >
+  <label for="product">Your Order</label>
+  <br>
+  <select id="product" margin="10px">
+    <option value="cosmetic bag red">Cosmetic Bag Red - $550</option>
+    <option value="cosmetic bag blue">Blue Bag - $1200</option>
+    <option value="cosmetic bag pink">Red Bag - $1200</option>
+    <option value="cosmetic bag yellow">Capybara Bag - $400</option>
+    <option value="cosmetic bag green">Summer Bag - $800</option>
+  </select>
   <br>
   <input type="text" name="name" placeholder="Your Name" required>
   <br>
